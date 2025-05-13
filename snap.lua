@@ -7,14 +7,14 @@ function Snap:load()
   self.stackPoints = {}
   for i=1,7 do
     table.insert(self.stackPoints,
-    Vector(100 + (i-1)*120, 200))  --stacks go below f's
+    Vector(100 + (i-1)*120, 50)) 
   end
 
-  -- foundational slots at the top
+  -- foundational slots
   self.foundationPoints = {}
   for i=1,4 do
     self.foundationPoints[ ({ "♥","♦","♣","♠" })[i] ] =
-      Vector(100 + (i-1)*100, 100)
+      Vector(300 + (i-1)*100, 400)
   end
 
   self.cardPick = {
@@ -52,4 +52,3 @@ function Snap:draw()
 end
 
 return Snap
-
